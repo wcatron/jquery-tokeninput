@@ -17,6 +17,7 @@ var DEFAULT_SETTINGS = {
     searchDelay: 300,
     minChars: 1,
     propertyToSearch: "name",
+    propertySuperType: "superName",
     jsonContainer: null,
     contentType: "json",
     excludeCurrent: false,
@@ -46,7 +47,8 @@ var DEFAULT_SETTINGS = {
 
     tokenFormatter: function(item) {
       var string = item[this.propertyToSearch];
-      return "<li><p>" + (this.enableHTML ? string : _escapeHTML(string)) + "</p></li>";
+      var superstring = item[this.propertySuperType];
+      return "<li><p class='super'>" + (this.enableHTML ? superstring : _escapeHTML(superstring)) + "</p><p>" + (this.enableHTML ? string : _escapeHTML(string)) + "</p></li>";
     },
 
     // Tokenization settings

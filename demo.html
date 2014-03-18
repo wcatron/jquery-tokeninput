@@ -30,26 +30,29 @@
     </div>
 
 
-    <h2>Simple Local Data Search</h2>
+    <h2>Simple Local Data Search - With Supers & Facebook Theme</h2>
     <div>
         <input type="text" id="demo-input-local" name="blah" />
         <input type="button" value="Submit" />
         <script type="text/javascript">
         $(document).ready(function() {
             $("#demo-input-local").tokenInput([
-                {id: 7, name: "Ruby"},
-                {id: 11, name: "Python"},
-                {id: 13, name: "JavaScript"},
-                {id: 17, name: "ActionScript"},
-                {id: 19, name: "Scheme"},
-                {id: 23, name: "Lisp"},
-                {id: 29, name: "C#"},
-                {id: 31, name: "Fortran"},
-                {id: 37, name: "Visual Basic"},
-                {id: 41, name: "C"},
-                {id: 43, name: "C++"},
-                {id: 47, name: "Java"}
-            ]);
+                {id: 7, name: "Ruby", superName: "Web"},
+                {id: 11, name: "Python", superName: "Web"},
+                {id: 13, name: "JavaScript", superName: "ClientSide"},
+                {id: 17, name: "ActionScript", superName: "ClientSide"},
+                {id: 19, name: "Scheme", superName: "Other"},
+                {id: 23, name: "Lisp", superName:"Desktop"},
+                {id: 29, name: "C#", superName:"Desktop"},
+                {id: 31, name: "Fortran", superName:"Desktop"},
+                {id: 37, name: "Visual Basic", superName:"Desktop"},
+                {id: 41, name: "C", superName:"Universal"},
+                {id: 43, name: "C++", superName:"Desktop"},
+                {id: 47, name: "Java", superName:"Universal"}
+            ],{
+                theme: "facebook"
+            }
+            );
         });
         </script>
     </div>
